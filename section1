@@ -1,0 +1,44 @@
+Regions - all over world, cluster of data centres (most services are region scoped) which region to choose
+Choice- compliance data governance, legacy req.
+Proximity- close to user/customer
+Available service - new services are not available in all regions
+Pricing - varies across region
+Availability Zone - (min 3 AZ n max 6 AZ)
+One or more discrete data centers with redundant power, networking and disasters -separated from each others but locally in distance, high bandwidth, ultra low latency connected.
+Edge Locations - content delivery with lowest latency
+Global services- IAM, Route 53, cloudfront, WAF
+
+Section 1- IAM 
+global service - Root account by default, no sharing, get MFA
+Users are people you can grouped. as developers group - can contain users only in group n not other group
+users/groups -assigned with json document to get policy
+IAM Policies - 
+Policy at group level- applied to all users of group
+Inline policy - only attached to user
+Structure → Version. "2012–10–04"
+id- policy identifier
+Statement- 
+sid- identifier of statement- optional
+Effect- allow or deny
+Principal - account/user/role to which policy appleid to
+action- list of actions tthis policy allow or denies
+Resource= list of resources to which action aapplies
+condition- optional- when policy is effective from
+Aws Management console -acess using username/password or mfa
+aws command line interface- by access key
+sdk - through access key
+user's can generate access for their account and get access key and secret key
+
+Roles - created for aws service to access other aws services on behalf of you. these are temporary.
+IAM security Tools(account level)- Credentials report- list all users and status of crednetials
+IAM access Advisor(user level)show service permisions to use n when those are used last time.
+
+Guideline and best practices -
+dont use root account for daily usage
+one physical user= one aws user
+strong password policy
+use mfa
+assign users to group and policies to group
+use access key,secretkey for aws cli and sdk
+audit permission using iam credential report
+
