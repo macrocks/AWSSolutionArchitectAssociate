@@ -1,0 +1,30 @@
+>IaaS -> renting ec2, EBS (storing data), ELB(distribute requests), Auto scaling
+>Steps to get EC2 started ----- decide OS, CPU, RAM, storage -EBS/EFS or EC2 instance store, network card, firewall rules, bootstrap script( ec2 user data)
+>t2 micro 1cpu 1GB ram EBS , t2 xlarge 4cpu 16gbram
+
+EC2 Instance Types -   M5.X2Large -M general purpose 5 generation X2 large instace type
+  General Purpose - great for diversity of workload and web server/code repo
+  balance between compute, memory n networking
+  
+  COmpute Optimized- great for compute intensive task .eg. Batch processing, medioa transcoding
+  high performance web server, scientific modeling, dedicated gaming server
+  
+  Memory optimized- fast performance large data process in memory
+  high performance sql/nosql database, real time processing of nig unstructured data
+  disctributed web cache, in memory optimized BI
+  
+  Storage Optimized - storage intensive task require high sequential read/write oaccess to large dataset on local storage
+  OLTP, cache for in memory database, sql/nosql database, datawarehouse ,distribute file system
+  
+  Security Group - allow rules only. can be reference by IP or sg
+  they are firewall on ec2 instance. they regulte -> access to ports, authorized IP range, control inbound/outbound network
+  cN BE ATACHED TO MULTIPLE EC2 , does live outside ec2
+  Ports- ssh- 22 ftp-21  22-sftp 80-http 443- https  3389- RDP(windows instance)
+  
+  Instance Types- 
+  On demand - short workload, predictable pricing, pay by second
+  Reserved (1 & 3 years) - long workload, convertible reserved instances (72% compared to on demand)
+  Savings plan- (1 & 3 year) commitment to amount of usage,long workload
+  Spot instance- short workload, cheap, can lose instance(90% compared to on demand)
+  dedicated instaces- no other customer share hardware
+  capacity reservation- reserve capacity in specific AZ for any duration.
