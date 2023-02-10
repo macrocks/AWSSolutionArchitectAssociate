@@ -1,0 +1,8 @@
+public vs private - IPv4 - almost running out of it
+IPV6- random
+Elastic IP- static IP allocation for instance or network. seperate from instance and will not be changed ,while pulbic ip for instance gets changed whenever instance is restarted.
+
+Placement Group- you can control instance placement stratergy using placement groups.
+Cluster- int low latency group in a single availability zone
+Spread- across underlying hardware -critical applications(max 7 instances)
+partitions- spread instances across many different partitions.
