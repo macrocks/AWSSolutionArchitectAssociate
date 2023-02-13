@@ -1,0 +1,39 @@
+EBS- elastic block store- network drive you can attach to ec2 while they are running. (network usb stick)
+one instance at a time, specific to availability zone, persist data even instance is terminated.
+Default EBS attached to EC2 is defaulted to delete on termincation while EBS volume is unchecked for delete on termincation by default (we can enable/disable)
+
+Snapshot - backup of ebs volume.  copy from az or to region as well
+Snapshot archive - 75% cheaper - 24 to 72 hours to restore in archive
+recycle bin for ebs snapshot - setup rule to retain deleted snapshot - specify retention period
+Fast snapshot restore (fsr) - force full inialization of snapshot to have no latency on first use
+
+AMI- amazon Machine Image 
+customization of EC2 instance- add your software,os, config, monitor
+faster boot/config time 
+built for specific region
+PUblic AMI- AWS provided 
+your onw AMI- make and maintain
+AWS marketplace- ami someone created 
+
+EC2 Instance Store- attahced to instace, fast, loss of data on terminzation or restart or hardware failure
+
+EBS columetype-s
+gp2/go3( SSD) - balance proce and performance
+io1/io2 (ssd) high performance for mission critical low latency high throughput
+st 1(HDD)- low cost frequenctly accessedd, instensive workload
+sc 1(HDD) - lowest cost, less frequently accessed
+
+EBS Encryption - data at rest as well as moving between instance n volume,
+snapshot is encrypted, volume created from snapshot is also encrypted. no impact on latency(minimal)  (AES encryption algo)
+
+EFA (elastic file system) network file system - (file sharing)
+works with multi az
+highly available ,scalable, expensive ,compatible with linux only, use SG to control access
+
+ storage tiers -
+   1. standard- for freuently access files 
+   2. infrequency access - cost to retrive files, lower price to store, EFS-IA with lifecycle policy
+   
+   Availability n durability
+   Standard- multi az for prod
+   one zone- less available , for test env
